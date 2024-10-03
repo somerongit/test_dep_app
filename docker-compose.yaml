@@ -1,0 +1,15 @@
+x-logging: &default-logging
+  options:
+    max-size: "10m"
+    max-file: "2"
+    compress: "true"
+  driver: local
+
+services:
+  test_dep:
+    image: test_dep
+    build: .
+    logging: *default-logging
+    ports:
+      - 3049:3000
+    restart: unless-stopped
