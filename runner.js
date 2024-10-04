@@ -1,7 +1,7 @@
 const Hapi = require('@hapi/hapi');
 const formatter = new Intl.DateTimeFormat("en-In", { dateStyle: "medium", timeStyle: "medium", hour12: false })
 
-const server = Hapi.server({ port: process.env.API_PORT });
+const server = Hapi.server({ port: 3000 });
 
 main()
 
